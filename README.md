@@ -1,1 +1,3 @@
 # advent-of-code-2024
+
+Also an attempt to see if I can pick up Rust relatively quickly...
