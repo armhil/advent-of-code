@@ -2,10 +2,10 @@ use std::fs::File;
 use std::io;
 use std::io::BufRead;
 
-mod day1;
+mod day2;
 
 fn main() -> io::Result<()> {
-  let file = File::open("./src/day1/index.txt")?;
+  /*let file = File::open("./src/day2/input.txt")?;
   let reader = io::BufReader::new(file);
   let mut first_list: Vec<i32> = vec![];
   let mut second_list: Vec<i32> = vec![];
@@ -20,6 +20,10 @@ fn main() -> io::Result<()> {
   let result = day1::part2::part2_calculate_similarity(first_list, second_list);
 
   println!("Total diff: {}", result);
-
+*/
+  let input_file = day2::part1::read_file();
+  let results_count = day2::part1::count_safe_reports(input_file);
+  println!("results_count {}", results_count);
   Ok(())
+
 }
