@@ -2,6 +2,7 @@ use std::fs::File;
 use std::io;
 use std::io::BufRead;
 
+#[allow(unused_assignments)]
 pub fn read_file() -> Vec<Vec<i32>> {
   let file = File::open("./src/day2/input.txt").unwrap();
   let reader = io::BufReader::new(file);
@@ -17,6 +18,7 @@ pub fn read_file() -> Vec<Vec<i32>> {
   return result;
 }
 
+#[allow(unused_assignments)]
 fn check_if_safe(input: Vec<i32>) -> bool {
   let mut direction = 0;
   if input[0] < input[1] {
@@ -46,6 +48,7 @@ fn check_if_safe(input: Vec<i32>) -> bool {
   return is_valid;
 }
 
+#[allow(unused_assignments)]
 pub fn count_safe_reports(input: Vec<Vec<i32>>) -> i32 {
   let mut result = 0;
   for i in 0..input.len() {
@@ -57,7 +60,7 @@ pub fn count_safe_reports(input: Vec<Vec<i32>>) -> i32 {
         let mut c = input[i].clone();
         c.remove(j);
         // this is not optimal
-        if (check_if_safe(c)) {
+        if check_if_safe(c) {
           result += 1;
           break;
         }
