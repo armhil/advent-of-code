@@ -1,8 +1,8 @@
 use std::io;
 
-mod day2;
+mod day3;
 
-fn main() -> io::Result<()> {
+fn main() {
   /*let file = File::open("./src/day2/input.txt")?;
   let reader = io::BufReader::new(file);
   let mut first_list: Vec<i32> = vec![];
@@ -19,9 +19,6 @@ fn main() -> io::Result<()> {
 
   println!("Total diff: {}", result);
 */
-  let input_file = day2::part1::read_file();
-  let results_count = day2::part1::count_safe_reports(input_file);
-  println!("results_count {}", results_count);
-  Ok(())
+  day3::part1::read_file_part2();
 
 }
